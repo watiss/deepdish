@@ -6,8 +6,10 @@ import itertools as itr
 import sys
 from contextlib import contextmanager
 # https://github.com/uchicago-cs/deepdish/issues/54
-#warnings.simplefilter("ignore", np.ComplexWarning)
-warnings.simplefilter("ignore", np.exceptions.ComplexWarning)
+try:
+    warnings.simplefilter("ignore", np.exceptions.ComplexWarning)
+except AttributeError:
+    warnings.simplefilter("ignore", np.ComplexWarning)
 
 _is_verbose = False
 _is_silent = False
