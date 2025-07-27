@@ -5,6 +5,7 @@ import numpy as np
 import itertools as itr
 import sys
 from contextlib import contextmanager
+# https://github.com/uchicago-cs/deepdish/issues/54
 #warnings.simplefilter("ignore", np.ComplexWarning)
 warnings.simplefilter("ignore", np.exceptions.ComplexWarning)
 
