@@ -5,7 +5,8 @@ import numpy as np
 import itertools as itr
 import sys
 from contextlib import contextmanager
-warnings.simplefilter("ignore", np.ComplexWarning)
+#warnings.simplefilter("ignore", np.ComplexWarning)
+warnings.simplefilter("ignore", np.exceptions.ComplexWarning)
 
 _is_verbose = False
 _is_silent = False
