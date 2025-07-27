@@ -44,3 +44,5 @@ validation-report.json
 
 # Folders to ignore
 node_modules
+
+*.egg-info/
