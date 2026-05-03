@@ -112,7 +112,9 @@ def _get_compression_filters(compression='default'):
 
 
 def _save_ndarray(handler, group, name, x, filters=None):
-    if np.issubdtype(x.dtype, np.unicode_):
+    # if np.issubdtype(x.dtype, np.unicode_):
+    # np.unicode_ was removed in NumPy 2.0; np.str_ is the equivalent
+    if np.issubdtype(x.dtype, np.str_):
         # Convert unicode strings to pure byte arrays
         strtype = b'unicode'
         itemsize = x.itemsize // 4
